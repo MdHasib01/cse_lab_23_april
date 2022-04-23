@@ -60,8 +60,8 @@ int main(){
     cout << "Father Salary: " << ChildObjOne.salary << endl;
     cout << "Mothers Name: " << ChildObjOne.MothersName << endl;
     ChildObjOne.MotherWork();
-    
-    //Space--
+
+    //Space---
     cout << endl;
 
     //Girl child object outputs
