@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// Declared a parent class as "Father"
 class Father {
         public:
         string FathersName;
@@ -15,6 +16,8 @@ class Father {
             this->salary = salary;
         };
     };
+
+// Declared a parent class as "Mother"
 class Mother  {
         public:
         string MothersName;
@@ -28,6 +31,7 @@ class Mother  {
         };
     };
 
+// First child class
 class GirlChild : public Mother, public Father {
     public:
     string GirlName;
@@ -37,22 +41,26 @@ class GirlChild : public Mother, public Father {
         this ->GirlAge = GirlAge;
     };
 };
-class BoyChild : public Mother, public Father {
+
+// Second Child class
+class BoyName : public Mother, public Father {
     public:
-    string BoyChild;
+    string BoyName;
     int BoyAge;
-    void boyFunction(string BoyChild, int BoyAge){
-        this ->BoyChild = BoyChild;
+    void boyFunction(string BoyName, int BoyAge){
+        this ->BoyName = BoyName;
         this ->BoyAge = BoyAge;
     };
 };
 
 int main(){
 
-    //Boy child obj output
-    BoyChild ChildObjOne;
+    //Declaring Boy child object
+    BoyName ChildObjOne;
+
+    //output of boy child
     ChildObjOne.boyFunction("James", 5);
-    cout << "Boy Name: " << ChildObjOne.BoyChild << endl;
+    cout << "Boy Name: " << ChildObjOne.BoyName << endl;
     ChildObjOne.fatherMethod("Mubin", 40000);
     ChildObjOne.motherMethod("Roza");
     cout << "Fathers Name: " << ChildObjOne.FathersName << endl;
@@ -64,8 +72,10 @@ int main(){
     //Space---
     cout << endl;
 
-    //Girl child object outputs
+    //Declaring Girl child object
     GirlChild ChildObjTwo;
+
+    //Output of girl child
     ChildObjTwo.girlFunction("jasmin", 4);
     cout << "Girl Name: " << ChildObjTwo.GirlName << endl;
     ChildObjTwo.fatherMethod("Ifti", 40000);
